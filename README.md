@@ -8,7 +8,7 @@ var validator = new Validator();
 
 // If Form has Restrictions
 for (var i = 0; i < restrictionsList; i++){
-     validator.AddRestrictions($(restrictionsLis[i]).attr('id'));
+     validator.AddRestrictions($(restrictionsList[i]).attr('id'));
 }
 
 //Observe All Inputs Inside Form Except Restricted Inputs 
