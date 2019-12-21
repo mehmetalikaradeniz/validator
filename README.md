@@ -14,6 +14,7 @@ for (var i = 0; i < restrictionsList; i++){
 //Observe All Inputs Inside Form Except Restricted Inputs 
 validator.ObserveElementGroup('#form')
 
+//Handle Elements Changed
 validator.ElementChanged(function(item, message){
     if (item.didFirstRun != false){
         if (item.Valid()) {
@@ -32,13 +33,13 @@ validator.AllElementsValidated(function(){
 
 $('#form').submit(function (e) {
     if(validator.ControlAllValid(){
-		//Submit
-	}
-	else{
-		// Trigger all Elements for Ui Manipulation (it will focus to invalid elements)
-		validator.TriggerAll();
-		e.preventDefault();
-	}
+	//Submit
+}
+else{
+	// Trigger all Elements for Ui Manipulation (it will focus to invalid elements)
+     validator.TriggerAll();
+     e.preventDefault();
+}
 });
 
 ```
